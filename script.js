@@ -40,6 +40,7 @@ function addDots() {
 }
 addDots();
 
+// Fonction maître
 function handleClick(direction) {
 	switchSlide(direction);
 	switchDots(direction);
@@ -55,6 +56,7 @@ arrows.forEach((arrow) => {
 	});
 });
 
+// Gère la direction dans laquelle le slide doit aller
 function switchSlide(direction) {
 	if (direction === "next") {
 		currentSlideIndex =
@@ -69,6 +71,7 @@ function switchSlide(direction) {
 	bannerText.innerHTML = currentSlide.tagLine;
 }
 
+// Gère la sélection du dot courant
 function switchDots(direction) {
 	const dots = document.querySelectorAll(".dot");
 	const dotSelected = document.querySelector(".dot_selected");
